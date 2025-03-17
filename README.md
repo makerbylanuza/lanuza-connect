@@ -1,1 +1,33 @@
-# lanuza-connect
+# LanuzaConnect  
+
+LanuzaConnect is a library for ESP32 designed to facilitate and simplify the use of the communication functions between two ESP32 boards provided by ESP32-NOW. Please read this document to learn how to use it.  
+
+## How to install this library  
+
+To install this library, please follow these steps:  
+1. Go to https://github.com/makerbylanuza/lanuza-connect/tree/main.
+2. Click on the green Code button located in the upper right corner
+3. Click on the Download ZIP option.
+4. Create a new sketch on Arduino IDE.
+5. Go to Sketch > Include library > Add .ZIP library
+6. Select the ZIP file you downloaded
+7. You now have LanuzaConnect available for use in your Arduino IDE projects!
+
+## How to use this library  
+
+To use this library, please first install it using the steps above. Then, open one of the examples include in the library by opening Arduino IDE and going to File > Examples > Custom library examples > LanuzaConnect.  
+
+### How do I find my ESP32's MAC address?
+
+To do that, please open the `macfinder` example in Arduino IDE, select your board and port and upload it. Reset your ESP32 by clicking on the RST button and look at the Serial Monitor at a rate of 115200 baud. Something like this should appear:
+```
+MAC Address: XX:XX:XX:XX:XX:XX
+```
+Please copy this MAC address. It will be different for each ESP32 board. You will need to use it each time you want to send something to that board.
+
+### How do I use this library in an Arduino IDE sketch?
+
+Just include the following code at the top of your sketch:
+```C++
+#include <LanuzaConnect.h>
+```
