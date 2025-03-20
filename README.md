@@ -38,18 +38,31 @@ Please copy this MAC address. It will be different for each ESP32 board. You wil
 In order to use the library, you must first create an object of the LanuzaConnect class specifying the type of device. Do this adding the following to your sketch before the `void setup()` function:
 ```C++
 LanuzaConnect esp(MODE);
-
-/*
-PLEASE SUBSTITUTE MODE FOR ONE OF THE FOLLOWING:
-
-"TRANSMITTER" - Able to only transmit messages to other boards
-"RECEIVER" - Able to only receive messages from other boards
-"TRANSCEIVER" - Able to both transmit and receive messages
-"MAC" - Used only to display the board MAC address
-*/
 ```
 Substitute the MODE argument for one of the following:
-| Argument       | Use  |
-| -------------- | ---- |
-|`"TRANSMITTER"` | 
-### fsf
+| Argument       | Use                                                                              |
+| -------------- | -------------------------------------------------------------------------------- |
+|`"TRANSMITTER"` | The board will only be able to transmit messages to other boards                 |
+|`"RECEIVER"`    | The board will only be able to receive messages from other boards                |
+|`"TRANSCEIVER"` | The board be able to both transmit and receive messages to and from other boards |
+|`"MAC"`         | Mode used only to display the board's MAC address: it can't transmit or receive  |
+
+Then, in the `void setup()` function, you must initialise your device, using the `init()` method, such as in the following example:  
+
+```C++
+void setup() {
+  Serial.begin(115200);
+  esp.init();
+}
+```
+
+In the Serial Monitor, the following text should appear:
+
+```
+MAC Address: XX:XX:XX:XX:XX:XX
+WiFi initialized
+ESP-NOW initialized
+Mode: XXXXXXXXXXXXX
+```
+
+
