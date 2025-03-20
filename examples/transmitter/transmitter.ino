@@ -10,7 +10,7 @@ uint8_t receiver[] = {0xB8, 0xD6, 0x1A, 0x47, 0xC3, 0x3C};
 
 void setup() {
   Serial.begin(115200);
-  esp.communicationStartup();
+  esp.init();
   esp.addPeer(receiver);
     
 }
