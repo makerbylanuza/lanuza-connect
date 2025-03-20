@@ -6,7 +6,7 @@ String last = "";
 
 void setup() {
     Serial.begin(115200);
-    esp.communicationStartup();    
+    esp.init();    
 }
 
 void loop() {
