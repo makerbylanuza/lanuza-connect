@@ -7,7 +7,7 @@ uint8_t peer[] = {0xB0, 0xA7, 0x32, 0x16, 0x1F, 0x9C};
 
 void setup() {
     Serial.begin(115200);
-    esp.communicationStartup();
+    esp.init();
     esp.addPeer(peer);
 
 }
