@@ -14,7 +14,7 @@ public:
     LanuzaConnect(const String &mode);
 
     void initializeWiFi();
-    void communicationStartup();
+    void init();
     void addPeer(const uint8_t *address);    
     void sendString(const String &text, const uint8_t *destAddress);
     String getLast();

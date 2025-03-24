@@ -53,7 +53,7 @@ void LanuzaConnect::OnDataRecv(const esp_now_recv_info_t *info, const uint8_t *i
 }
 
 // Configurar comunicación
-void LanuzaConnect::communicationStartup() {
+void LanuzaConnect::init() {
 
     	initializeWiFi();
 
