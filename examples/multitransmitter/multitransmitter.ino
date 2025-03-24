@@ -15,10 +15,10 @@ void setup() {
 }
 
 void loop() {
-   esp.sendString("Hello, receiver #1!", receiver1);
-   delay(1000);
-   esp.sendString("Hello, receiver #2!", receiver2);
-   delay(4000);
+  esp.sendString("Hello, receiver #1!", receiver1);
+  delay(1000);
+  esp.sendString("Hello, receiver #2!", receiver2);
+  delay(4000);
 }
 
 
