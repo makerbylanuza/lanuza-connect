@@ -110,4 +110,30 @@ Text sent; Delivery Fail
 
 To see if your ESP32 board has received any data, you do not have to do anything. Your board must, however, be initialized in either `"RECEIVER"` or `"TRANSCEIVER"` mode. Then, if your board receives anything, you will see the following message in the Serial Monitor:
 ```
+Received data: Hello World!
+Length: 12
+```
 
+However, this does not allow you to get the text you received. To do this, please follow the instructions in the next question.
+
+### How do I get the text I received?
+
+In order to use the text received by your ESP32 board, you have to use the `getLast()` function. This function will return as a string the last received data. An example is shown below:
+```C++
+#include <LanuzaConnect.h>
+
+LanuzaConnect esp("RECEIVER");
+String last = "";
+
+void setup() {
+  Serial.begin(115200);
+  esp.init();
+}
+
+void loop() {
+  if (last != esp.getLast()) {
+    last = esp.getLast();
+    Serial.println("Received something!");
+  }
+}
+```
