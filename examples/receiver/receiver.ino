@@ -5,15 +5,13 @@ LanuzaConnect esp("RECEIVER");
 String last = "";
 
 void setup() {
-    Serial.begin(115200);
-    esp.init();    
+  Serial.begin(115200);
+  esp.init();    
 }
 
 void loop() {
   if (last != esp.getLast()) {
     last = esp.getLast();
-    Serial.println("No sabía que hubiese tantos mundos...")
+    Serial.println("Received a new string!");
   }
 }
-
-
