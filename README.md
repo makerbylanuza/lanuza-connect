@@ -5,7 +5,7 @@ LanuzaConnect is a library for ESP32 designed to facilitate and simplify the use
 ## How to install this library  
 
 To install this library, please follow these steps:  
-1. Go to https://github.com/makerbylanuza/lanuza-connect/tree/main.
+1. Go to https://github.com/makerbylanuza/lanuza-connect/.
 2. Click on the green Code button located in the upper right corner
 3. Click on the Download ZIP option.
 4. Create a new sketch on Arduino IDE.
