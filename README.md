@@ -33,7 +33,7 @@ MAC Address: XX:XX:XX:XX:XX:XX
 ```
 Please copy this MAC address. It will be different for each ESP32 board. You will need to use it each time you want to send something to that board.
 
-### How do I initalise the WiFi device?
+### How do I initialise the WiFi device?
 
 In order to use the library, you must first create an object of the LanuzaConnect class specifying the type of device. Do this adding the following to your sketch before the `void setup()` function:
 ```C++
